@@ -4,20 +4,28 @@
     {
       "Effect": "Allow",
       "Action": [
-        "ecs:CreateCluster",
-        "ecs:DeregisterContainerInstance",
         "ecs:DiscoverPollEndpoint",
-        "ecs:Poll",
-        "ecs:RegisterContainerInstance",
-        "ecs:StartTelemetrySession",
-        "ecs:Submit*",
-        "ecr:GetAuthorizationToken",
+        "secretsmanager:DescribeSecret",
+        "ecs:CreateCluster",
         "ecr:GetDownloadUrlForLayer",
-        "ecr:BatchGetImage",
-        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetAuthorizationToken",
+        "ecs:RegisterContainerInstance",
+        "ecs:Submit*",
+        "logs:PutLogEvents",
+        "secretsmanager:ListSecretVersionIds",
+        "ssm:PutParameter",
+        "ecs:Poll",
         "s3:GetObject",
+        "secretsmanager:GetRandomPassword",
+        "secretsmanager:GetResourcePolicy",
         "logs:CreateLogStream",
-        "logs:PutLogEvents"
+        "secretsmanager:GetSecretValue",
+        "ecs:StartTelemetrySession",
+        "ecr:BatchGetImage",
+        "ssm:GetParametersByPath",
+        "ecs:DeregisterContainerInstance",
+        "ecr:BatchCheckLayerAvailability",
+        "secretsmanager:ListSecrets"
       ],
       "Resource": "*"
     }

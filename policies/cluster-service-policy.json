@@ -4,13 +4,16 @@
     {
       "Effect": "Allow",
       "Action": [
-        "elasticloadbalancing:Describe*",
-        "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
-        "elasticloadbalancing:DeregisterTargets",
-        "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
-        "elasticloadbalancing:RegisterTargets",
+        "ssm:PutParameter",
+        "ec2:AuthorizeSecurityGroupIngress",
         "ec2:Describe*",
-        "ec2:AuthorizeSecurityGroupIngress"
+        "secretsmanager:*",
+        "elasticloadbalancing:RegisterTargets",
+        "elasticloadbalancing:Describe*",
+        "elasticloadbalancing:DeregisterTargets",
+        "ssm:GetParametersByPath",
+        "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
+        "elasticloadbalancing:RegisterInstancesWithLoadBalancer"
       ],
       "Resource": "*"
     }
